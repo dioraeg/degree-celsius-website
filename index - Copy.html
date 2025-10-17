@@ -37,7 +37,17 @@ img { max-width: 100%; height: auto; display: block; }
 
 main section { padding:24px 0; }
 .dark-card { background:var(--card); border:1px solid var(--line); border-radius:var(--radius); box-shadow:var(--shadow); }
-.hero-card { background: radial-gradient(60% 60% at 50% 0, rgba(255,138,0,.15), rgba(51,181,255,.12)), var(--card); border:1px solid var(--line); border-radius:var(--radius); box-shadow:var(--shadow); padding:18px; }
+.hero-card {
+  position: relative;
+  background: 
+    linear-gradient(rgba(11, 18, 32, 0.8), rgba(11, 18, 32, 0.8)), /* dark overlay */
+    url("assets/images/degreecelsius-logo.png") center/contain no-repeat;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 80px 24px; /* adds space so content doesn’t overlap logo */
+  text-align: center;
+}
 .grid-2 { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
 .grid-3 { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
 h1 { font-size: clamp(1.6rem, 2rem + .6vw, 2.6rem); margin:0 0 8px; }
@@ -117,6 +127,8 @@ label { font-weight:600; }
 input, textarea { width:100%; padding:12px 12px; background:#0e1626; border:1.5px solid #2a3a5d; border-radius:12px; color:var(--ink); outline:none; }
 input::placeholder, textarea::placeholder { color:#7d93b6; }
 input:focus, textarea:focus { border-color:#3aa9ff; box-shadow:0 0 0 3px rgba(58,169,255,.25);}
+
+
 
 .footer { background:var(--panel); color:var(--muted); margin-top:24px; padding:24px 0; border-top:1px solid var(--line);}
 .footer-grid { display:grid; grid-template-columns:1.2fr 1fr 1fr; gap:16px; align-items:center; }
@@ -226,11 +238,7 @@ input:focus, textarea:focus { border-color:#3aa9ff; box-shadow:0 0 0 3px rgba(58
   text-align: center;
 }
 
-.hero-text {
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* center horizontally */
-}
+
 
 .hero-text {
   display: flex;
@@ -428,21 +436,17 @@ input:focus, textarea:focus { border-color:#3aa9ff; box-shadow:0 0 0 3px rgba(58
 <section class="container" id="hero" style="padding:18px 0">
 <div class="hero-card">
 <div class="hero-text">
-<img class="logo-hero"
-     src="assets/images/degreecelsius-logo.png"
-     alt="Degree Celsius logo"
-     width="560" height="180"
-     style="margin-bottom:10px;">
+
 
 </div>
 <div class="hero-text">
 <div class="line1">Tailored Heating &amp; Cooling Solutions for Melbourne Homes</div>
 </div>
-<p class="small" style="margin: 10px 0; text-align: center;">
-<div class="line1">MELBOURNE • RESIDENTIAL &amp; LIGHT COMMERCIAL</div>
-<div class="line2">Specialists in Air Conditioning, Hydronic Heating &amp; Custom Climate Control for New Builds and Renovations.</div>
-</p>
+<div class="small" style="margin: 10px 0; text-align: center;">
+  <div class="line1">MELBOURNE • RESIDENTIAL &amp; LIGHT COMMERCIAL</div>
+  <div class="line2">Specialists in Air Conditioning, Hydronic Heating &amp; Custom Climate Control for New Builds and Renovations.</div>
 </div>
+
 </section>
 
     <!-- WHY -->
@@ -555,27 +559,46 @@ input:focus, textarea:focus { border-color:#3aa9ff; box-shadow:0 0 0 3px rgba(58
     <p class="small" style="margin-top:6px">— Sarah, Essendon</p>
   </div>
 </div>
-
-      
-	  
-
-
     </section>
 <section class="container" id="contact">
-<div class="section-title" style="margin: 10px 0; text-align: center;"><h2 style="margin: 10px 0; text-align: center;">Ready to Upgrade Your Home’s Comfort?</h2></div>
-<form class="dark-card" onsubmit="event.preventDefault();alert('Thanks! We will be in touch.');">
-<div class="grid-2">
-<div><label for="name">Name</label><input id="name" placeholder="Your name" required=""/></div>
-<div><label for="suburb">Suburb</label><input id="suburb" placeholder="Your suburb"/></div>
-</div>
-<div class="grid-2">
-<div><label for="phone">Phone</label><input id="phone" inputmode="tel" placeholder="Your phone number"/></div>
-<div><label for="email">Email</label><input id="email" placeholder="you@example.com" type="email"/></div>
-</div>
-<div><label for="msg">Brief Message</label><textarea id="msg" placeholder="Tell us about your project…" rows="4"></textarea></div>
-<button class="btn" type="submit">Request a Quote</button>
-</form>
+  <form class="dark-card"
+        action="https://formspree.io/f/xkgqyvdz"
+        method="POST">
+    <div class="grid-2">
+      <div>
+        <label for="name">Name</label>
+        <input id="name" name="name" placeholder="Your name" required>
+      </div>
+      <div>
+        <label for="suburb">Suburb</label>
+        <input id="suburb" name="suburb" placeholder="Your suburb">
+      </div>
+    </div>
+
+    <div class="grid-2">
+      <div>
+        <label for="phone">Phone</label>
+        <input id="phone" name="phone" inputmode="tel" placeholder="Your phone number">
+      </div>
+      <div>
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" placeholder="you@example.com" required>
+      </div>
+    </div>
+
+    <div>
+      <label for="msg">Brief Message</label>
+      <textarea id="msg" name="message" rows="4" placeholder="Tell us about your project…" required></textarea>
+    </div>
+
+    <input type="text" name="_gotcha" style="display:none">
+    <input type="hidden" name="_subject" value="New website enquiry – Degree Celsius">
+    <input type="hidden" name="_captcha" value="false">
+
+    <button class="btn" type="submit">Request a Quote</button>
+  </form>
 </section>
+
 <footer class="site-footer">
   <!-- Row 1: Back to top (right) -->
   <div class="container footer-top">
