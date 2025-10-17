@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Degree Celsius • Sidebar Dark</title>
-<meta content="Tailored heating &amp; cooling solutions for Melbourne homes. Specialists in air conditioning, hydronic heating, and underfloor heating for new builds and renovations." name="description"/>
+<meta name="description" content="Tailored heating & cooling solutions for Melbourne homes. Specialists in air conditioning, hydronic heating, and underfloor heating for new builds and renovations."/>
 <style>
 :root {
   --bg: #0b1220; --panel: #0f172a; --card: #121a2b;
@@ -22,23 +21,13 @@ img { max-width: 100%; height: auto; display: block; }
 
 .wrap { display:grid; grid-template-columns:260px 1fr; min-height:100vh; }
 .sidebar { background:var(--panel); border-right:1px solid var(--line); position:sticky; top:0; height:100vh; padding:18px; }
-.sidebar .brand { font-weight:800; letter-spacing:.1px; margin-bottom:12px; }
-.sidebar nav { display:grid; gap:10px; }
-.sidebar .cta { display:block; margin-top:12px; background:var(--grad); color:#fff; padding:10px 14px; border-radius:999px; font-weight:800; text-align:center; box-shadow:var(--shadow);}
-/* Center links inside the sidebar */
-.sidebar nav{ 
-  justify-items: center;          /* centers grid children */
-}
-.sidebar nav a{
-  display:block; 
-  width:100%;                     /* full-width click area */
-  text-align:center;              /* center the text */
-}
-
+.sidebar .brand { font-weight:800; letter-spacing:.1px; margin-bottom:12px; text-align:center; }
+.sidebar nav { display:grid; gap:10px; justify-items:center; }
+.sidebar .cta { display:block; margin-top:12px; background:var(--grad); color:#fff; padding:10px 14px; border-radius:999px; font-weight:800; text-align:center; box-shadow:var(--shadow); }
 
 main section { padding:24px 0; }
 .dark-card { background:var(--card); border:1px solid var(--line); border-radius:var(--radius); box-shadow:var(--shadow); }
-.hero-card { background: radial-gradient(60% 60% at 50% 0, rgba(255,138,0,.15), rgba(51,181,255,.12)), var(--card); border:1px solid var(--line); border-radius:var(--radius); box-shadow:var(--shadow); padding:18px; }
+.hero-card { background: radial-gradient(60% 60% at 50% 0, rgba(255,138,0,.15), rgba(51,181,255,.12)), var(--card); border:1px solid var(--line); border-radius:var(--radius); box-shadow:var(--shadow); padding:18px; text-align:center; }
 .grid-2 { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
 .grid-3 { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
 h1 { font-size: clamp(1.6rem, 2rem + .6vw, 2.6rem); margin:0 0 8px; }
@@ -50,14 +39,14 @@ h3 { margin:10px 0 6px; }
 .card { padding:16px; }
 .section-title { display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:12px; }
 
-.btn { background:var(--grad); color:#fff; padding:10px 16px; border-radius:999px; font-weight:800; border:0; cursor:pointer; box-shadow:var(--shadow);}
+.btn { background:var(--grad); color:#fff; padding:10px 16px; border-radius:999px; font-weight:800; border:0; cursor:pointer; box-shadow:var(--shadow); }
 
 .services { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
 .service { padding:14px; }
-.ph-img { height:160px; background:linear-gradient(135deg, rgba(255,138,0,.18), rgba(51,181,255,.18)); border:1px dashed #3a4b75; border-radius:14px; display:grid; place-items:center; color:var(--muted); font-weight:700; letter-spacing:.02em; }
+.ph-img { height:160px; border-radius:14px; overflow:hidden; }
+.ph-img img { width:100%; height:100%; object-fit:cover; border-radius:14px; border:1px solid var(--line); }
 
 .project { display:grid; grid-template-columns:1.2fr 1fr; gap:16px; }
-.project .project-img { min-height:220px; display:grid; place-items:center; background:linear-gradient(135deg, rgba(255,138,0,.16), rgba(51,181,255,.16)); border:1px dashed #3a4b75; border-radius:14px; }
 
 form { padding:16px; display:grid; gap:12px; }
 label { font-weight:600; }
@@ -67,100 +56,10 @@ input:focus, textarea:focus { border-color:#3aa9ff; box-shadow:0 0 0 3px rgba(58
 
 .footer { background:var(--panel); color:var(--muted); margin-top:24px; padding:24px 0; border-top:1px solid var(--line);}
 .footer-grid { display:grid; grid-template-columns:1.2fr 1fr 1fr; gap:16px; align-items:center; }
-.footer .logo-row { display:flex; align-items:center; gap:12px; }
-.footer .logo-row img { width:44px; height:44px; border-radius:50%; }
-/* Visual polish */
-.site-footer {
-  border-top: 1px solid var(--line);
-  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.12)) , var(--bg);
-}
-.footer-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr)); /* 2 even columns */
-  gap: 24px;
-  align-items: start;
-}
-
-.footer-col { min-width: 200px; }
-.footer-title { color: var(--muted); font-weight: 600; margin-bottom: 8px; }
-.footer-brand { font-weight: 800; font-size: 1.1rem; letter-spacing: .2px; }
-.footer-tag { color: var(--muted); margin-top: 6px; }
-
-.footer-links { list-style: none; margin: 0; padding: 0; }
-.footer-links a {
-  color: var(--ink);
-  opacity: .8;
-  text-decoration: none;
-}
-.footer-socials {
-  display: flex;
-  justify-content: center;  /* centers like your contact lines */
-  gap: 12px;
-  flex-wrap: wrap;
-  text-align: center;
-}
-
-.footer-links a:hover, .footer-links a:focus { opacity: 1; text-decoration: underline; }
-
-/* Bottom bar */
-.footer-bar {
-  display: flex; align-items: center; justify-content: space-between;
-  padding: 12px 0 24px;
-  border-top: 1px dashed var(--line);
-  margin-top: 10px;
-}
-.footer-legal { color: var(--muted); display: flex; gap: 12px; flex-wrap: wrap; }
-.back-to-top { color: var(--ink); text-decoration: none; opacity: .75; }
-.back-to-top:hover, .back-to-top:focus { opacity: 1; text-decoration: underline; }
+.footer .logo-row { display:flex; align-items:center; gap:12px; flex-direction:column; text-align:center; }
+.footer .logo-row img { width:64px; height:64px; border-radius:16px; box-shadow:var(--shadow); }
 
 /* Responsive */
-@media (max-width: 960px){
-  .footer-grid { grid-template-columns: 1fr 1fr; }
-}
-@media (max-width: 640px){
-  .footer-grid { grid-template-columns: 1fr; }
-  .footer-bar { flex-direction: column; gap: 8px; align-items: flex-start; }
-}
-/* Stack logo above the text and center it everywhere */
-.logo-row {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 16px;
-  text-align: center;
-}
-
-/* Remove the mobile-only override you had for .logo-row */
-@media (max-width: 640px){
-  /* no special .logo-row rule needed anymore */
-}
-/* put "Back to top" on its own row and right-align it */
-.site-footer .footer-bar{
-  display: flex;
-  justify-content: flex-end; /* pushes the link to the right edge */
-  padding: 8px 0;
-}
-.site-footer .back-to-top{ margin-left: auto; }
-
-/* center the copyright line */
-.site-footer .footer-copy{ 
-  text-align: center; 
-  margin-top: 14px;
-}
-/* Center "Back to top" on its own row */
-.site-footer .footer-bar{
-  display: flex;
-  justify-content: center;   /* center horizontally */
-  padding: 8px 0;
-}
-
-.site-footer .back-to-top{
-  margin-left: 0;            /* undo the right-align */
-  margin-right: 0;
-}
-
-
-
 @media (max-width:960px){
   .wrap { grid-template-columns:1fr; }
   .sidebar { position:static; height:auto; }
@@ -169,349 +68,191 @@ input:focus, textarea:focus { border-color:#3aa9ff; box-shadow:0 0 0 3px rgba(58
   .project { grid-template-columns:1fr; }
 }
 
-.hero-card {
-  text-align: center;
-}
+/* Logo & hero styling */
+.logo-deg { color: #f26b5e; }
+.logo-symbol { color: #ff8a65; }
+.logo-cel { color: #4db6e2; }
+.brand .logo-tagline { font-weight: 400; font-size: 0.8rem; color: #9bb4d1; margin-top: 4px; }
 
-.hero-text {
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* center horizontally */
-}
+.hero-logo { display:block; margin:0 auto 18px; max-width:280px; height:auto; }
 
-.hero-text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  font-size: 1.2em;
-  line-height: 1.4em;
-}
-.hero-text .line1 {
-  font-weight: bold;
-}
-.hero-text .line2 {
-  font-style: italic;
-}
-
-.hero .logo {
-  display: inline-block;
-  background: var(--card);
-  padding: 24px 32px;
-  border-radius: 20px;   /* filleted corners */
-  box-shadow: var(--shadow);
-}
-.hero .logo img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
-
-.logo-deg { color: #f26b5e; }       /* warm coral/orange */
-.logo-symbol { color: #ff8a65; }    /* degree dot */
-.logo-cel { color: #4db6e2; }       /* cool blue */
-.brand .logo-tagline {
-  font-weight: 500;
-  font-size: 0.9rem;
-  color: #9bb4d1;
-  margin-top: 2px;
-}
-
-
-.brand {
-  text-align: center;
-  margin: 1rem 0;
-}
-.brand .logo-deg,
-.brand .logo-symbol,
-.brand .logo-cel {
-  font-size: 2rem;       /* enlarge main brand */
-  font-weight: 800;
-}
-.brand .logo-tagline {
-  display: block;
-  font-weight: 400;
-  font-size: 0.75rem;    /* smaller tagline */
-  color: #9bb4d1;
-  margin-top: 4px;
-  white-space: normal;
-  line-height: 1.2;
-}
-
-
-/* Services OBH styling */
-.service p.muted{margin:.45rem 0 0;}
-.service p.muted:first-of-type{margin-top:.25rem;}
-.service p.muted .svc-label{
-  font-weight:700;
-  color:#cde1ff;
-  letter-spacing:.02em;
-  margin-right:.25rem;
-}
-/* tighten card spacing so 3 lines fit nicely */
-.services .service.dark-card{padding-bottom:1.1rem;}
-
-
-.project-video video {
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-  max-height: 500px;
-  object-fit: cover;
-}
-
-.hero-logo {
-  display: block;
-  margin: 0 auto 18px;
-  max-width: 280px;
-  height: auto;
-}
-/* Center the "Back to top" link */
-.footer-top{
-  display:flex;
-  justify-content:center;   /* centers horizontally */
-  padding: 10px 0 16px;     /* adds a little air above the main footer */
-}
-.footer-top .back-to-top{
-  opacity:.85;
-  text-align:center;
-}
-
-/* Extra breathing room below the legal line */
-.site-footer{
-  padding-bottom: 36px;     /* space inside the footer at the very bottom */
-}
-
-/* (optional) tighten/space the copyright row itself */
-.footer-copy{
-  text-align:center;
-  margin-top: 14px;
-}
-/* Keep Featured Project as two columns on tablets/desktops */
-#projects .grid-2 { 
-  grid-template-columns: 1.2fr 1fr;  /* video left, testimonial right */
-  align-items: start;
-}
-
-/* Only stack on small phones */
-@media (max-width: 720px){
-  #projects .grid-2 { grid-template-columns: 1fr; }
-}
-
-/* Featured Project: equal-height two-column cards */
-#projects .grid-2{
-  grid-template-columns: 1.2fr 1fr;   /* keep your left/right ratio */
-  align-items: stretch;                /* stretch items to same row height */
-}
-
-#projects .grid-2 > .card{
-  height: 100%;                        /* fill the grid area height */
-  display: flex;                       /* keeps inner spacing tidy */
-  flex-direction: column;
-}
-
-/* Keep the video tidy & consistent */
-#projects .project-video{ aspect-ratio: 16 / 9; }  /* consistent video height */
-#projects .project-video video{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;                    /* optional: crops if needed */
-  border-radius: 14px;                  /* match your inner rounding */
-}
-
-/* Stack on small screens (no equal-height needed) */
-@media (max-width: 720px){
-  #projects .grid-2{ grid-template-columns: 1fr; }
-  #projects .grid-2 > .card{ height: auto; }
-}
-/* Make the bold lead-in text in list items white */
-.card li b,
-.card li strong {
-  color: var(--ink);
-  font-weight: 700;
-}
-
-
-
+/* Video */
+.project-video video { border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.4); width:100%; height:auto; object-fit:cover; }
 </style>
 </head>
+
 <body>
 <div class="wrap">
-<aside class="sidebar">
-<div class="brand">
-<span class="logo-deg">degree</span><span class="logo-symbol">°</span><span class="logo-cel">celsius</span>
-<div class="logo-tagline" style="margin: 10px 0; text-align: center;">Redefining comfort, one degree at a time</div>
-</div>
-<nav>
-<a href="#hero">Home</a>
-<a href="#why">Why Us</a>
-<a href="#services">Services</a>
-<a href="#projects">Projects</a>
-<a href="#contracting">Contracting</a>
-<a href="#contact">Contact</a>
-<a class="cta" href="#contact">Request Quote</a>
-</nav>
-<div class="small" style="position:absolute;bottom:18px;left:18px;right:18px"> <!-- bottom of sidebar text --> </div>
-</aside>
-<main>
-<section class="container" id="hero" style="padding:18px 0">
-<div class="hero-card">
-<div class="hero-text">
-<img alt="Degree Celsius logo" src="data:image/png;base64,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" style="display: block; margin: 10px auto 20px auto; border-radius: 12px; max-width: 100%; height: auto;"/>
-</div>
-<div class="hero-text">
-<div class="line1">Tailored Heating &amp; Cooling Solutions for Melbourne Homes</div>
-</div>
-<p class="small" style="margin: 10px 0; text-align: center;">
-<div class="line1">MELBOURNE • RESIDENTIAL &amp; LIGHT COMMERCIAL</div>
-<div class="line2">Specialists in Air Conditioning, Hydronic Heating &amp; Custom Climate Control for New Builds and Renovations.</div>
-</p>
-</div>
-</section>
-<section class="container" id="why">
-<div class="section-title" style="margin: 10px 0; text-align: center;"><h2 style="margin: 10px 0; text-align: center;">Why Choose Us</h2></div>
-<div class="cards">
-<div class="dark-card card"><h3 style="margin: 10px 0; text-align: center;">Custom Systems</h3><p class="small" style="margin: 10px 0; text-align: center;">We tailor every heating and cooling solution to your home’s unique needs.</p></div>
-<div class="dark-card card"><h3 style="margin: 10px 0; text-align: center;">Expert Installation</h3><p class="small" style="margin: 10px 0; text-align: center;">Our qualified team delivers flawless workmanship and attention to detail.</p></div>
-<div class="dark-card card"><h3 style="margin: 10px 0; text-align: center;">Customer‑Focused</h3><p class="small" style="margin: 10px 0; text-align: center;">From design to handover, we make the experience seamless and professional.</p></div>
-</div>
-</section>
-<section class="container" id="services">
-<div class="section-title" style="margin: 10px 0; text-align: center;"><h2 style="margin: 10px 0; text-align: center;">Services</h2></div>
-<div class="services">
-<article class="service dark-card">
-<div aria-label="Ducted Air Conditioning image placeholder" class="ph-img" role="img">
-<span>Image Placeholder</span>
-</div>
-<h3 style="margin: 10px 0; text-align: center;">Ducted Air Conditioning</h3>
-<p class="muted"><strong class="svc-label">Overview:</strong> Whole-home comfort with concealed ducts and zoning options.</p><p class="muted"><strong class="svc-label">Benefits:</strong> Even airflow, independent room control, and energy efficiency.</p><p class="muted"><strong class="svc-label">Highlight:</strong> Discreet design — only vents are visible.</p>
-</article>
-<article class="service dark-card">
-<div aria-label="Split‑System Air Conditioning image placeholder" class="ph-img" role="img">
-<span>Image Placeholder</span>
-</div>
-<h3 style="margin: 10px 0; text-align: center;">Split‑System Air Conditioning</h3>
-<p class="muted"><strong class="svc-label">Overview:</strong> Wall or floor-mounted systems sized to individual rooms.</p><p class="muted"><strong class="svc-label">Benefits:</strong> Cost-effective and energy-efficient, quick installation, Perfect for bedrooms, living rooms, or offices.</p><p class="muted"><strong class="svc-label">Highlight:</strong>Wide choice of modern, quiet units with remote control.</p>
-</article>
-<article class="service dark-card">
-<div aria-label="Hydronic Heating image placeholder" class="ph-img" role="img">
-<span>Image Placeholder</span>
-</div>
-<h3 style="margin: 10px 0; text-align: center;">Hydronic Heating</h3>
-<p class="muted"><strong class="svc-label">Overview:</strong> Efficient water-based heating for a natural, silent warmth.</p><p class="muted"><strong class="svc-label">Benefits:</strong> No dust or drafts, ideal for allergy sufferers, consistent temperature.</p><p class="muted"><strong class="svc-label">Highlight:</strong> Works with radiators, underfloor, or trench systems.</p>
-</article>
-<article class="service dark-card">
-<div aria-label="Underfloor Heating image placeholder" class="ph-img" role="img">
-<span>Image Placeholder</span>
-</div>
-<h3 style="margin: 10px 0; text-align: center;">Underfloor Heating</h3>
-<p class="muted"><strong class="svc-label">Overview:</strong> Luxury heating from beneath your floors.</p><p class="muted"><strong class="svc-label">Benefits:</strong> Comfortable warm floors, efficient energy use, invisible system.</p><p class="muted"><strong class="svc-label">Highlight:</strong> Perfect upgrade for bathrooms, kitchens, and living areas.</p>
-</article>
-<article class="service dark-card">
-<div aria-label="New Builds &amp; Renovations image placeholder" class="ph-img" role="img">
-<span>Image Placeholder</span>
-</div>
-<h3 style="margin: 10px 0; text-align: center;">New Builds &amp; Renovations</h3>
-<p class="muted"><strong class="svc-label">Overview:</strong> Heating and cooling designed into your home from the start.</p><p class="muted"><strong class="svc-label">Benefits:</strong> Tailored integration with architects/builders, future-proof solutions.</p><p class="muted"><strong class="svc-label">Highlight:</strong> Combine ducted, split, or hydronic systems to suit your lifestyle.</p>
-</article>
-<article class="service dark-card">
-<div aria-label="Maintenance &amp; Servicing image placeholder" class="ph-img" role="img">
-<span>Image Placeholder</span>
-</div>
-<h3 style="margin: 10px 0; text-align: center;">Maintenance &amp; Servicing</h3>
-<p class="muted"><strong class="svc-label">Overview:</strong> Preventative care to keep systems efficient and reliable.</p><p class="muted"><strong class="svc-label">Benefits:</strong> Reduced breakdowns, extended equipment life, lower running costs.</p><p class="muted"><strong class="svc-label">Highlight:</strong> Flexible service plans for peace of mind.</p>
-</article>
-</div>
-</section>
+  <aside class="sidebar">
+    <div class="brand">
+      <span class="logo-deg">degree</span><span class="logo-symbol">°</span><span class="logo-cel">celsius</span>
+      <div class="logo-tagline">Redefining comfort, one degree at a time</div>
+    </div>
+    <nav>
+      <a href="#hero">Home</a>
+      <a href="#why">Why Us</a>
+      <a href="#services">Services</a>
+      <a href="#projects">Projects</a>
+      <a href="#contracting">Contracting</a>
+      <a href="#contact">Contact</a>
+      <a class="cta" href="#contact">Request Quote</a>
+    </nav>
+  </aside>
 
-
-	
-
-<section class="container" id="contracting">
-<div class="section-title" style="margin: 10px 0; text-align: center;"><h2 style="margin: 10px 0; text-align: center;">Contracting Solutions for Integrators</h2></div>
-<div class="grid-2">
-<div class="dark-card card">
-<p class="small" style="margin: 10px 0; text-align: center;">Degrees Celsius is the trusted partner of choice for high-end heating and cooling integrators across Melbourne. We deliver complete project management, technical design review, and end-to-end installation services.</p>
-<ul class="small">
-<li><strong>Design Integration</strong> – We review and refine your heating/cooling system designs to ensure peak performance.</li>
-<li><strong>Turnkey Installation</strong> – On-site project management and expert installation teams ensure flawless delivery.</li>
-<li><strong>Trusted for High‑End Builds</strong> – Our work is regularly featured in luxury homes, architectural builds, and major renovations.</li>
-<li><strong>Seamless Collaboration</strong> – We work as an extension of your team, keeping your project on track and on budget.</li>
-</ul>
-</div>
-<div class="dark-card card" style="min-height:220px;display:grid;place-items:center;">
-		<div class="ph-img" style="width:100%;height:100%"><span>Image Placeholder</span></div>		
+  <main>
+    <!-- HERO -->
+    <section class="container" id="hero" style="padding:18px 0">
+      <div class="hero-card">
+        <img alt="Degree Celsius logo" class="hero-logo" src="assets/images/degreecelsius-logo.png"/>
+        <div class="hero-text">
+          <div class="line1">Tailored Heating & Cooling Solutions for Melbourne Homes</div>
+          <div class="small" style="margin-top:10px;">MELBOURNE • RESIDENTIAL & LIGHT COMMERCIAL</div>
+          <div class="line2" style="font-style:italic;margin-top:6px;">Specialists in Air Conditioning, Hydronic Heating & Custom Climate Control for New Builds and Renovations.</div>
         </div>
-</div>
-</section>
-    <section id="projects" class="container">
-      <div class="section-title"><h2>Featured Project</h2></div>
-<div class="grid-2">
-  <!-- VIDEO CARD -->
-  <div class="dark-card card">                           <!-- open -->
-    <div class="project-video">
-      <video controls playsinline poster="video-poster.jpg" width="100%">
-        <source src="your-video.mp4" type="video/mp4" />
-        <source src="your-video.webm" type="video/webm" />
-        Your browser does not support the video tag.
-      </video>
-    </div>
-  </div>                                                 <!-- ✅ close the video card -->
-
-  <!-- TESTIMONIAL CARD -->
-  <div class="dark-card card">
-    <h3>Client Testimonial</h3>
-    <p class="small">"Couldn't be happier with the system and the service. The team at Degrees Celsius went above and beyond."</p>
-    <p class="small" style="margin-top:6px">— Sarah, Essendon</p>
-  </div>
-</div>
-
-      
-	  
-
-
+      </div>
     </section>
-<section class="container" id="contact">
-<div class="section-title" style="margin: 10px 0; text-align: center;"><h2 style="margin: 10px 0; text-align: center;">Ready to Upgrade Your Home’s Comfort?</h2></div>
-<form class="dark-card" onsubmit="event.preventDefault();alert('Thanks! We will be in touch.');">
-<div class="grid-2">
-<div><label for="name">Name</label><input id="name" placeholder="Your name" required=""/></div>
-<div><label for="suburb">Suburb</label><input id="suburb" placeholder="Your suburb"/></div>
-</div>
-<div class="grid-2">
-<div><label for="phone">Phone</label><input id="phone" inputmode="tel" placeholder="Your phone number"/></div>
-<div><label for="email">Email</label><input id="email" placeholder="you@example.com" type="email"/></div>
-</div>
-<div><label for="msg">Brief Message</label><textarea id="msg" placeholder="Tell us about your project…" rows="4"></textarea></div>
-<button class="btn" type="submit">Request a Quote</button>
-</form>
-</section>
-<footer class="site-footer">
-  <!-- Row 1: Back to top (right) -->
-  <div class="container footer-top">
-    <a href="#hero" class="back-to-top" aria-label="Back to top">Back to top ↑</a>
-  </div>
 
-  <!-- Row 2: Main footer content -->
-  <div class="container footer-grid">
-    <div class="logo-row">
-      <!-- keep your existing logo <img ...> tag here -->
-      <img alt="Degree Celsius logo" src="data:image/png;base64,REPLACE_WITH_YOUR_EXISTING_DATA_URI" />
-      <div>
-        <div style="margin: 10px 0; text-align: center;"><span class="logo-deg">degree</span><span class="logo-symbol">°</span><span class="logo-cel">celsius</span></div>
-        <div class="small" style="margin: 10px 0; text-align: center;">Redefining comfort, one degree at a time</div>
+    <!-- WHY US -->
+    <section class="container" id="why">
+      <div class="section-title"><h2>Why Choose Us</h2></div>
+      <div class="cards">
+        <div class="dark-card card"><h3>Custom Systems</h3><p class="small">We tailor every heating and cooling solution to your home’s unique needs.</p></div>
+        <div class="dark-card card"><h3>Expert Installation</h3><p class="small">Our qualified team delivers flawless workmanship and attention to detail.</p></div>
+        <div class="dark-card card"><h3>Customer-Focused</h3><p class="small">From design to handover, we make the experience seamless and professional.</p></div>
       </div>
-    </div>
+    </section>
 
-    <div>
-      <div class="small" style="margin: 10px 0; text-align: center;">Contact</div>
-      <div class="small" style="margin: 10px 0; text-align: center;"><a href="tel:+61459326621" class="phone-link" aria-label="Call 0459 326 621">
-  0459&nbsp;326&nbsp;621
-</a></div>
-      <div class="small" style="margin: 10px 0; text-align: center;">
-        <a href="https://degreecelsius.com.au" rel="noopener" target="_blank">www.degreecelsius.com.au</a>
+    <!-- SERVICES -->
+    <section class="container" id="services">
+      <div class="section-title"><h2>Services</h2></div>
+      <div class="services">
+        <article class="service dark-card">
+          <div class="ph-img"><img src="assets/images/ducted-air-conditioning.jpg" alt="Ducted air conditioning vents and ducting"></div>
+          <h3>Ducted Air Conditioning</h3>
+          <p class="muted"><strong>Overview:</strong> Whole-home comfort with concealed ducts and zoning options.</p>
+          <p class="muted"><strong>Benefits:</strong> Even airflow, independent room control, and energy efficiency.</p>
+          <p class="muted"><strong>Highlight:</strong> Discreet design — only vents are visible.</p>
+        </article>
+
+        <article class="service dark-card">
+          <div class="ph-img"><img src="assets/images/split-system.jpg" alt="Split-system indoor unit"></div>
+          <h3>Split-System Air Conditioning</h3>
+          <p class="muted"><strong>Overview:</strong> Wall or floor-mounted systems sized to individual rooms.</p>
+          <p class="muted"><strong>Benefits:</strong> Cost-effective, energy-efficient, and quick installation — perfect for bedrooms, living rooms, or offices.</p>
+          <p class="muted"><strong>Highlight:</strong> Wide choice of modern, quiet units with remote control.</p>
+        </article>
+
+        <article class="service dark-card">
+          <div class="ph-img"><img src="assets/images/hydronic-heating.jpg" alt="Hydronic heating radiator"></div>
+          <h3>Hydronic Heating</h3>
+          <p class="muted"><strong>Overview:</strong> Efficient water-based heating for a natural, silent warmth.</p>
+          <p class="muted"><strong>Benefits:</strong> No dust or drafts, ideal for allergy sufferers, consistent temperature.</p>
+          <p class="muted"><strong>Highlight:</strong> Works with radiators, underfloor, or trench systems.</p>
+        </article>
+
+        <article class="service dark-card">
+          <div class="ph-img"><img src="assets/images/hydronic-underfloor-heating.jpg" alt="Hydronic underfloor heating install"></div>
+          <h3>Underfloor Heating</h3>
+          <p class="muted"><strong>Overview:</strong> Luxury heating from beneath your floors.</p>
+          <p class="muted"><strong>Benefits:</strong> Comfortable warm floors, efficient energy use, invisible system.</p>
+          <p class="muted"><strong>Highlight:</strong> Perfect upgrade for bathrooms, kitchens, and living areas.</p>
+        </article>
+
+        <article class="service dark-card">
+          <div class="ph-img"><img src="assets/images/degreecelsius-logo.png" alt="Degree Celsius logo"></div>
+          <h3>New Builds & Renovations</h3>
+          <p class="muted"><strong>Overview:</strong> Heating and cooling designed into your home from the start.</p>
+          <p class="muted"><strong>Benefits:</strong> Tailored integration with architects/builders, future-proof solutions.</p>
+          <p class="muted"><strong>Highlight:</strong> Combine ducted, split, or hydronic systems to suit your lifestyle.</p>
+        </article>
+
+        <article class="service dark-card">
+          <div class="ph-img"><img src="assets/images/servicing.jpg" alt="Air conditioner servicing"></div>
+          <h3>Maintenance & Servicing</h3>
+          <p class="muted"><strong>Overview:</strong> Preventative care to keep systems efficient and reliable.</p>
+          <p class="muted"><strong>Benefits:</strong> Reduced breakdowns, extended equipment life, lower running costs.</p>
+          <p class="muted"><strong>Highlight:</strong> Flexible service plans for peace of mind.</p>
+        </article>
       </div>
-      <div class="footer-socials">
-        <a class="small" href="https://www.instagram.com/degreecelsius_hvac?igsh=cjg2eXlmYXdpcHYy&utm_source=qr" rel="noopener" target="_blank">Instagram</a>
+    </section>
+
+    <!-- CONTRACTING -->
+    <section class="container" id="contracting">
+      <div class="section-title"><h2>Contracting Solutions for Integrators</h2></div>
+      <div class="grid-2">
+        <div class="dark-card card">
+          <p class="small">Degree Celsius is the trusted partner of choice for high-end heating and cooling integrators across Melbourne. We deliver complete project management, technical design review, and end-to-end installation services.</p>
+          <ul class="small">
+            <li><strong>Design Integration</strong> – We review and refine your heating/cooling system designs to ensure peak performance.</li>
+            <li><strong>Turnkey Installation</strong> – On-site project management and expert installation teams ensure flawless delivery.</li>
+            <li><strong>Trusted for High-End Builds</strong> – Our work is regularly featured in luxury homes, architectural builds, and major renovations.</li>
+            <li><strong>Seamless Collaboration</strong> – We work as an extension of your team, keeping your project on track and on budget.</li>
+          </ul>
+        </div>
+        <div class="dark-card card" style="min-height:220px;display:grid;place-items:center;">
+          <div class="ph-img"><img src="assets/images/hydronic-heating.jpg" alt="Heating installation project"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED PROJECT -->
+    <section class="container" id="projects">
+      <div class="section-title"><h2>Featured Project</h2></div>
+      <div class="grid-2">
+        <div class="dark-card card">
+          <div class="project-video">
+            <video controls playsinline poster="assets/images/hydronic-underfloor-heating.jpg" width="100%">
+              <source src="assets/video/featured.mp4" type="video/mp4" />
+              <source src="assets/video/featured.webm" type="video/webm" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+        <div class="dark-card card">
+          <h3>Client Testimonial</h3>
+          <p class="small">"Couldn't be happier with the system and the service. The team at Degree Celsius went above and beyond."</p>
+          <p class="small" style="margin-top:6px">— Sarah, Essendon</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="container" id="contact">
+      <div class="section-title"><h2>Ready to Upgrade Your Home’s Comfort?</h2></div>
+      <form class="dark-card" onsubmit="event.preventDefault();alert('Thanks! We will be in touch.');">
+        <div class="grid-2">
+          <div><label for="name">Name</label><input id="name" placeholder="Your name" required/></div>
+          <div><label for="suburb">Suburb</label><input id="suburb" placeholder="Your suburb"/></div>
+        </div>
+        <div class="grid-2">
+          <div><label for="phone">Phone</label><input id="phone" inputmode="tel" placeholder="Your phone number"/></div>
+          <div><label for="email">Email</label><input id="email" type="email" placeholder="you@example.com"/></div>
+        </div>
+        <div><label for="msg">Brief Message</label><textarea id="msg" rows="4" placeholder="Tell us about your project…"></textarea></div>
+        <button class="btn" type="submit">Request a Quote</button>
+      </form>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer site-footer">
+      <div class="container" style="text-align:center;">
+        <a href="#hero" class="back-to-top" aria-label="Back to top">Back to top ↑</a>
+      </div>
+
+      <div class="container footer-grid">
+        <div class="logo-row">
+          <img alt="Degree Celsius logo" src="assets/images/degreecelsius-logo.png" />
+          <div>
+            <div><span class="logo-deg">degree</span><span class="logo-symbol">°</span><span class="logo-cel">celsius</span></div>
+            <div class="small">Redefining comfort, one degree at a time</div>
+          </div>
+        </div>
+        <div>
+          <div class="small">Contact</div>
+          <div class="small"><a href="tel:+61459326621">0459&nbsp;326&nbsp;621</a></div>
+          <div class="small"><a href="https://degreecelsius.com.au" target="_blank" rel="noopener">www.degreecelsius.com.au</a></div>
+          <div class="footer-socials" style="margin-top:8px;">
+            <a class="small" href="https://www.instagram.com/degreecelsius_hvac?igsh=cjg2eXlmYXdpcHYy&utm_source=qr" target="_blank" rel="noopener">Instagram</a>
         <a class="small" href="https://www.facebook.com/share/1AeKjB9W2e/?mibextid=wwXIfr" rel="noopener" target="_blank">Facebook</a>
         <a class="small" href="https://www.linkedin.com/company/degree-celsius/" rel="noopener" target="_blank">LinkedIn</a>
       </div>
