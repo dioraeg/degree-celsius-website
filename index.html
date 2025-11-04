@@ -1,434 +1,733 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <!-- 
-    === META & SEO CONFIGURATION ===
-    Defines the website's metadata for browsers, SEO crawlers, and social media.
-    The <head> is heavily optimized for Google, Open Graph (Facebook/LinkedIn), and Twitter.
-  -->
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Degree Celsius | Heating & Cooling Melbourne</title>
+<meta name="description" content="Tailored heating & cooling solutions for Melbourne homes. Specialists in air conditioning, hydronic heating, and underfloor heating for new builds and renovations.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.degreecelsius.com.au/">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HVACBusiness",
+  "@id": "https://www.degreecelsius.com.au/#business",
+  "name": "Degree Celsius",
+  "url": "https://www.degreecelsius.com.au/",
+  "logo": "https://www.degreecelsius.com.au/assets/images/degreecelsius-logo.png",
+  "image": "https://www.degreecelsius.com.au/assets/images/degreecelsius-logo.png",
+  "telephone": "+61459326621",
+  "email": "admin@degreecelsius.com.au",
+  "areaServed": [
+    { "@type": "City", "name": "Melbourne" },
+    { "@type": "AdministrativeArea", "name": "Victoria" }
+  ],
+  "serviceType": [
+    "Ducted air conditioning",
+    "Split-system air conditioning",
+    "Hydronic heating",
+    "Underfloor heating",
+    "HVAC maintenance & servicing"
+  ],
+  "sameAs": [
+    "https://www.instagram.com/degreecelsius_hvac",
+    "https://www.facebook.com/share/1AeKjB9W2e/",
+    "https://www.linkedin.com/company/degree-celsius/"
+  ],
+  "contactPoint": [{
+    "@type": "ContactPoint",
+    "contactType": "customer service",
+    "telephone": "+61459326621",
+    "areaServed": "AU",
+    "availableLanguage": "en"
+  }]
+}
+</script>
 
-  <meta charset="utf-8" /> <!-- Defines UTF-8 character encoding for full symbol/emoji support -->
-  <meta name="viewport" content="width=device-width, initial-scale=1" /> <!-- Ensures responsive scaling on all devices -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "url": "https://www.degreecelsius.com.au/",
+  "name": "Degree Celsius",
+  "publisher": { "@id": "https://www.degreecelsius.com.au/#business" }
+}
+</script>
 
-  <title>Degree Celsius | Heating & Cooling Melbourne</title> <!-- Page title (appears in browser tab and Google search results) -->
+<link rel="icon" href="https://www.degreecelsius.com.au/assets/images/favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="https://www.degreecelsius.com.au/assets/images/favicon.ico" type="image/x-icon">
 
-  <!-- SEO: Primary meta description -->
-  <meta name="description" content="Tailored heating & cooling solutions for Melbourne homes. Specialists in air conditioning, hydronic heating, and underfloor heating for new builds and renovations.">
+<link rel="preload" href="assets/css/base.css" as="style">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/layout.css">
+<link rel="stylesheet" href="assets/css/components.css">
+<link rel="stylesheet" href="assets/css/pages-home.css">
 
-  <!-- Directs search engines to index and follow links -->
-  <meta name="robots" content="index, follow">
+<style>
+:root {
+  --bg: #0b1220; --panel: #0f172a; --card: #121a2b;
+  --ink: #e7f0ff; --muted: #9fb4d4; --line: #1f2a44;
+  --warm:#FF8A00; --hot:#FF6B6B; --cool:#33B5FF;
+  --grad: linear-gradient(90deg, var(--warm), var(--hot), var(--cool));
+  --shadow: 0 10px 28px rgba(0,0,0,.35); --radius: 18px;
+}
+* { box-sizing: border-box; }
+html,body { margin:0; padding:0; background:var(--bg); color:var(--ink); font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; }
+a { color: var(--ink); text-decoration: none; }
+img { max-width: 100%; height: auto; display: block; }
+.container { width:min(1100px,92vw); margin:0 auto; }
 
-  <!-- Canonical URL prevents duplicate content issues across variations of the same URL -->
-  <link rel="canonical" href="https://www.degreecelsius.com.au/">
+.wrap { display:grid; grid-template-columns:260px 1fr; min-height:100vh; }
+.sidebar { background:var(--panel); border-right:1px solid var(--line); position:sticky; top:0; height:100vh; padding:18px; }
+.sidebar .brand { font-weight:800; letter-spacing:.1px; margin-bottom:12px; }
+.sidebar nav { display:grid; gap:10px; }
+.sidebar .cta { display:block; margin-top:12px; background:var(--grad); color:#fff; padding:10px 14px; border-radius:999px; font-weight:800; text-align:center; box-shadow:var(--shadow);}
+/* Center links inside the sidebar */
+.sidebar nav{ 
+  justify-items: center;          /* centers grid children */
+}
+.sidebar nav a{
+  display:block; 
+  width:100%;                     /* full-width click area */
+  text-align:center;              /* center the text */
+}
 
-  <!-- 
-    === OPEN GRAPH (Facebook, LinkedIn, etc.) ===
-    Defines how the website preview appears when shared on social media.
-  -->
-  <meta property="og:title" content="Degree Celsius | Heating & Cooling Melbourne">
-  <meta property="og:description" content="Tailored heating & cooling solutions for Melbourne homes. Specialists in air conditioning, hydronic heating, and underfloor heating.">
-  <meta property="og:url" content="https://www.degreecelsius.com.au/">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://www.degreecelsius.com.au/assets/images/og.jpg">
+main section { padding:24px 0; }
+.dark-card { background:var(--card); border:1px solid var(--line); border-radius:var(--radius); box-shadow:var(--shadow); }
+.hero-card { background: radial-gradient(60% 60% at 50% 0, rgba(255,138,0,.15), rgba(51,181,255,.12)), var(--card); border:1px solid var(--line); border-radius:var(--radius); box-shadow:var(--shadow); padding:18px; }
+.grid-2 { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+.grid-3 { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+h1 { font-size: clamp(1.6rem, 2rem + .6vw, 2.6rem); margin:0 0 8px; }
+h2 { font-size: clamp(1.2rem, 1.4rem + .5vw, 2rem); margin:0 0 8px; }
+h3 { margin:10px 0 6px; }
+.small, .muted { color:var(--muted); }
 
-  <!-- 
-    === TWITTER CARD DATA ===
-    Controls how links appear when shared on Twitter.
-  -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Degree Celsius | Heating & Cooling Melbourne">
-  <meta name="twitter:description" content="Air conditioning, hydronic & underfloor heating — Melbourne specialists.">
-  <meta name="twitter:image" content="https://www.degreecelsius.com.au/assets/images/og.jpg">
+/* --- Center all section headings and subheadings --- */
+.container > h2,
+.container > h3,
+.section-title h2,
+.section-title h3 {
+  text-align: center;
+  width: 100%;
+}
 
-  <!-- 
-    === ICONS & PWA SUPPORT ===
-    Provides icons for Apple devices, browsers, and potential PWA configuration.
-  -->
-  <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
-  <link rel="manifest" href="/site.webmanifest">
-  <meta name="theme-color" content="#0b1220"> <!-- Sets browser UI color (for Android, Chrome, etc.) -->
+.cards { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+.card { padding:16px; }
+.section-title { display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:12px; }
 
-  <!-- 
-    === SCHEMA.ORG STRUCTURED DATA (JSON-LD) ===
-    Enhances search visibility with rich results (Knowledge Graph, business info, etc.)
-    Includes HVACBusiness + WebSite schema to help Google understand entity relationships.
-  -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"HVACBusiness",
-    "@id":"https://www.degreecelsius.com.au/#business",
-    "name":"Degree Celsius",
-    "url":"https://www.degreecelsius.com.au/",
-    "logo":{
-      "@type":"ImageObject",
-      "url":"https://www.degreecelsius.com.au/assets/images/degreecelsius-logo.png",
-      "width":560,
-      "height":180
-    },
-    "image":"https://www.degreecelsius.com.au/assets/images/degreecelsius-logo.png",
-    "telephone":"+61459326621",
-    "email":"admin@degreecelsius.com.au",
-    "priceRange":"$$",
-    "address":{
-      "@type":"PostalAddress",
-      "addressLocality":"Melbourne",
-      "addressRegion":"VIC",
-      "addressCountry":"AU"
-    },
-    "openingHoursSpecification":[{
-      "@type":"OpeningHoursSpecification",
-      "dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],
-      "opens":"08:00",
-      "closes":"18:00"
-    }],
-    "areaServed":[
-      {"@type":"City","name":"Melbourne"},
-      {"@type":"AdministrativeArea","name":"Victoria"}
-    ],
-    "serviceType":[
-      "Ducted air conditioning",
-      "Split-system air conditioning",
-      "Hydronic heating",
-      "Underfloor heating",
-      "HVAC maintenance & servicing"
-    ],
-    "sameAs":[
-      "https://www.instagram.com/degreecelsius_hvac",
-      "https://www.facebook.com/share/1AeKjB9W2e/",
-      "https://www.linkedin.com/company/degree-celsius/"
-    ],
-    "contactPoint":[{
-      "@type":"ContactPoint",
-      "contactType":"customer service",
-      "telephone":"+61459326621",
-      "areaServed":"AU",
-      "availableLanguage":"en"
-    }]
+/* --- Minimal bright button (no glow) --- */
+.btn,
+.sidebar .cta {
+  background: linear-gradient(90deg, #f8fafc, #e2e8f0); /* soft white-grey gradient */
+  color: #0b1220;                /* dark navy text for contrast */
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 12px 20px;
+  border-radius: 999px;
+  border: 1px solid #9fb4d4;     /* faint outline for definition */
+  cursor: pointer;
+  transition: background 0.25s ease-in-out, color 0.25s ease-in-out;
+}
+
+/* Hover / focus state */
+.btn:hover,
+.btn:focus,
+.sidebar .cta:hover,
+.sidebar .cta:focus {
+  background: linear-gradient(90deg, #e2e8f0, #cbd5e1); /* slightly darker grey-blue */
+  color: #000;  /* deeper text color on hover */
+}
+
+
+
+/* --- Logo size overrides --- */
+
+/* Keep the hero logo big and responsive */
+.logo-hero {
+  display: block;
+  margin: 0 auto 10px;
+  width: clamp(280px, 55vw, 650px); /* stays large on desktop, scales down on mobile */
+  height: auto;
+  border-radius: 12px;
+}
+
+/* Make the footer logo smaller (override default 44px) */
+.site-footer .logo-row img.logo-footer {
+  width: 250px;      /* smaller logo */
+  height: auto;
+  border-radius: 8px; /* remove round circle; use 50% if you want round */
+}
+
+.services { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+.service { padding:14px; }
+.service .svc-img {
+  height:160px; border-radius:14px; overflow:hidden; border:1px dashed #3a4b75;
+}
+.service .svc-img img { width:100%; height:100%; object-fit:cover; }
+
+.project { display:grid; grid-template-columns:1.2fr 1fr; gap:16px; }
+.project .project-img { min-height:220px; display:grid; place-items:center; background:linear-gradient(135deg, rgba(255,138,0,.16), rgba(51,181,255,.16)); border:1px dashed #3a4b75; border-radius:14px; }
+
+/* Projects: stack video + testimonial on phones */
+@media (max-width: 768px){
+  #projects .grid-2 { 
+    grid-template-columns: 1fr; 
   }
-  </script>
-
-  <!-- Separate schema for the website entity -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"WebSite",
-    "url":"https://www.degreecelsius.com.au/",
-    "name":"Degree Celsius",
-    "publisher":{"@id":"https://www.degreecelsius.com.au/#business"}
+  #projects .grid-2 > .card{
+    height: auto;         /* don't force equal heights on mobile */
   }
-  </script>
+}
 
-  <!-- 
-    === FAVICON ===
-    Small browser tab icon.
-    Uses both "icon" and "shortcut icon" for legacy browser compatibility.
-  -->
-  <link rel="icon" href="https://www.degreecelsius.com.au/assets/images/favicon.ico" type="image/x-icon">
-  <link rel="shortcut icon" href="https://www.degreecelsius.com.au/assets/images/favicon.ico" type="image/x-icon">
+/* Responsive video in Featured Project */
+#projects .project-video { aspect-ratio: 16 / 9; }
+#projects .project-video video{
+  width: 100%;
+  height: 100%;
+  max-height: none;     /* drop the 500px cap */
+  display: block;
+  object-fit: cover;
+  border-radius: 14px;
+}
 
-  <!-- 
-    === CSS IMPORTS ===
-    base.css defines global styles and variables
-    layout.css controls grid/containers
-    components.css handles UI blocks (cards, buttons)
-    pages-home.css adds page-specific overrides
-    Preload base.css to improve performance on initial render.
-  -->
-  <link rel="stylesheet" href="assets/css/base.css">
-  <link rel="stylesheet" href="assets/css/base.css">
-  <link rel="stylesheet" href="assets/css/layout.css">
-  <link rel="stylesheet" href="assets/css/components.css">
-  <link rel="stylesheet" href="assets/css/pages-home.css">
+form { padding:16px; display:grid; gap:12px; }
+label { font-weight:600; }
+input, textarea { width:100%; padding:12px 12px; background:#0e1626; border:1.5px solid #2a3a5d; border-radius:12px; color:var(--ink); outline:none; }
+input::placeholder, textarea::placeholder { color:#7d93b6; }
+input:focus, textarea:focus { border-color:#3aa9ff; box-shadow:0 0 0 3px rgba(58,169,255,.25);}
+
+
+
+.footer { background:var(--panel); color:var(--muted); margin-top:24px; padding:24px 0; border-top:1px solid var(--line);}
+.footer-grid { display:grid; grid-template-columns:1.2fr 1fr 1fr; gap:16px; align-items:center; }
+.footer .logo-row { display:flex; align-items:center; gap:12px; }
+.footer .logo-row img { width:44px; height:44px; border-radius:50%; }
+/* Visual polish */
+.site-footer {
+  border-top: 1px solid var(--line);
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.12)) , var(--bg);
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr)); /* 2 even columns */
+  gap: 24px;
+  align-items: start;
+}
+
+.footer-col { min-width: 200px; }
+.footer-title { color: var(--muted); font-weight: 600; margin-bottom: 8px; }
+.footer-brand { font-weight: 800; font-size: 1.1rem; letter-spacing: .2px; }
+.footer-tag { color: var(--muted); margin-top: 6px; }
+
+.footer-links { list-style: none; margin: 0; padding: 0; }
+.footer-links a {
+  color: var(--ink);
+  opacity: .8;
+  text-decoration: none;
+}
+.footer-socials {
+  display: flex;
+  justify-content: center;  /* centers like your contact lines */
+  gap: 12px;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.footer-links a:hover, .footer-links a:focus { opacity: 1; text-decoration: underline; }
+
+/* Bottom bar */
+.footer-bar {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 12px 0 24px;
+  border-top: 1px dashed var(--line);
+  margin-top: 10px;
+}
+.footer-legal { color: var(--muted); display: flex; gap: 12px; flex-wrap: wrap; }
+.back-to-top { color: var(--ink); text-decoration: none; opacity: .75; }
+.back-to-top:hover, .back-to-top:focus { opacity: 1; text-decoration: underline; }
+
+/* Responsive */
+@media (max-width: 960px){
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px){
+  .footer-grid { grid-template-columns: 1fr; }
+  .footer-bar { flex-direction: column; gap: 8px; align-items: flex-start; }
+}
+/* Stack logo above the text and center it everywhere */
+.logo-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+}
+
+/* Remove the mobile-only override you had for .logo-row */
+@media (max-width: 640px){
+  /* no special .logo-row rule needed anymore */
+}
+/* put "Back to top" on its own row and right-align it */
+.site-footer .footer-bar{
+  display: flex;
+  justify-content: flex-end; /* pushes the link to the right edge */
+  padding: 8px 0;
+}
+.site-footer .back-to-top{ margin-left: auto; }
+
+/* center the copyright line */
+.site-footer .footer-copy{ 
+  text-align: center; 
+  margin-top: 14px;
+}
+/* Center "Back to top" on its own row */
+.site-footer .footer-bar{
+  display: flex;
+  justify-content: center;   /* center horizontally */
+  padding: 8px 0;
+}
+
+.site-footer .back-to-top{
+  margin-left: 0;            /* undo the right-align */
+  margin-right: 0;
+}
+
+
+
+@media (max-width:960px){
+  .wrap { grid-template-columns:1fr; }
+  .sidebar { position:static; height:auto; }
+  .grid-2 { grid-template-columns:1fr; }
+  .grid-3, .services { grid-template-columns:1fr; }
+  .project { grid-template-columns:1fr; }
+}
+
+.hero-card {
+  text-align: center;
+}
+
+
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 1.2em;
+  line-height: 1.4em;
+}
+.hero-text .line1 {
+  font-weight: bold;
+}
+.hero-text .line2 {
+  font-style: italic;
+}
+
+.hero .logo {
+  display: inline-block;
+  background: var(--card);
+  padding: 24px 32px;
+  border-radius: 20px;   /* filleted corners */
+  box-shadow: var(--shadow);
+}
+.hero .logo img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+
+.logo-deg { color: #f26b5e; }       /* warm coral/orange */
+.logo-symbol { color: #ff8a65; }    /* degree dot */
+.logo-cel { color: #4db6e2; }       /* cool blue */
+.brand .logo-tagline {
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: #9bb4d1;
+  margin-top: 2px;
+}
+
+
+.brand {
+  text-align: center;
+  margin: 1rem 0;
+}
+.brand .logo-deg,
+.brand .logo-symbol,
+.brand .logo-cel {
+  font-size: 2rem;       /* enlarge main brand */
+  font-weight: 800;
+}
+.brand .logo-tagline {
+  display: block;
+  font-weight: 400;
+  font-size: 0.75rem;    /* smaller tagline */
+  color: #9bb4d1;
+  margin-top: 4px;
+  white-space: normal;
+  line-height: 1.2;
+}
+
+
+/* Services OBH styling */
+.service p.muted{margin:.45rem 0 0;}
+.service p.muted:first-of-type{margin-top:.25rem;}
+.service p.muted .svc-label{
+  font-weight:700;
+  color:#cde1ff;
+  letter-spacing:.02em;
+  margin-right:.25rem;
+}
+/* tighten card spacing so 3 lines fit nicely */
+.services .service.dark-card{padding-bottom:1.1rem;}
+
+/* --- Integrator image fix --- */
+.integrator-img {
+  height: 100%;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.integrator-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Only target the second (right-hand) card in the Contracting section */
+#contracting .grid-2 > .card:last-child {
+  display: flex;
+}
+
+
+.project-video video {
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  max-height: 500px;
+  object-fit: cover;
+}
+
+.hero-logo {
+  display: block;
+  margin: 0 auto 18px;
+  max-width: 280px;
+  height: auto;
+}
+/* Center the "Back to top" link */
+.footer-top{
+  display:flex;
+  justify-content:center;   /* centers horizontally */
+  padding: 10px 0 16px;     /* adds a little air above the main footer */
+}
+.footer-top .back-to-top{
+  opacity:.85;
+  text-align:center;
+}
+
+/* Extra breathing room below the legal line */
+.site-footer{
+  padding-bottom: 36px;     /* space inside the footer at the very bottom */
+}
+
+/* (optional) tighten/space the copyright row itself */
+.footer-copy{
+  text-align:center;
+  margin-top: 14px;
+}
+/* Keep Featured Project as two columns on tablets/desktops */
+#projects .grid-2 { 
+  grid-template-columns: 1.2fr 1fr;  /* video left, testimonial right */
+  align-items: start;
+}
+
+/* Only stack on small phones */
+@media (max-width: 720px){
+  #projects .grid-2 { grid-template-columns: 1fr; }
+}
+
+/* Featured Project: equal-height two-column cards */
+#projects .grid-2{
+  grid-template-columns: 1.2fr 1fr;   /* keep your left/right ratio */
+  align-items: stretch;                /* stretch items to same row height */
+}
+
+#projects .grid-2 > .card{
+  height: 100%;                        /* fill the grid area height */
+  display: flex;                       /* keeps inner spacing tidy */
+  flex-direction: column;
+}
+
+/* Keep the video tidy & consistent */
+#projects .project-video{ aspect-ratio: 16 / 9; }  /* consistent video height */
+#projects .project-video video{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;                    /* optional: crops if needed */
+  border-radius: 14px;                  /* match your inner rounding */
+}
+
+/* Stack on small screens (no equal-height needed) */
+@media (max-width: 720px){
+  #projects .grid-2{ grid-template-columns: 1fr; }
+  #projects .grid-2 > .card{ height: auto; }
+}
+/* Make the bold lead-in text in list items white */
+.card li b,
+.card li strong {
+  color: var(--ink);
+  font-weight: 700;
+}
+
+
+
+</style>
 </head>
-
 <body>
-  <!-- Accessibility: Allows keyboard users to jump directly to main content -->
+  <!-- Accessibility skip link (helps keyboard and screen reader users jump past the sidebar) -->
   <a class="skip-link" href="#main">Skip to content</a>
 
   <div class="wrap">
-    <!-- === SIDEBAR NAVIGATION === -->
     <aside class="sidebar">
       <div class="brand">
-        <!-- Logo shown in sidebar -->
-        <img src="assets/images/degreecelsius-logo.png" alt="Degree Celsius logo" class="sidebar-logo" loading="eager" decoding="async">
-        <div class="logo-tagline">Redefining comfort, one degree at a time</div>
+        <img src="assets/images/degreecelsius-logo.png"
+             alt="Degree Celsius logo"
+             class="sidebar-logo"
+             style="display:block;margin:0 auto 10px;max-width:180px;height:auto;">
+        <div class="logo-tagline" style="margin:10px 0;text-align:center;">
+          Redefining comfort, one degree at a time
+        </div>
       </div>
 
-      <!-- Primary site navigation -->
-      <nav aria-label="Primary">
-        <a href="#hero">Home</a>
-        <a href="#why">Why Us</a>
-        <a href="#services">Services</a>
-        <a href="#projects">Projects</a>
-        <a href="#contracting">Contracting</a>
-        <a href="#contact">Contact</a>
-        <a class="cta" href="#contact">Request Quote</a> <!-- CTA (Call To Action) button -->
-      </nav>
-    </aside>
 
-    <!-- === MAIN CONTENT AREA === -->
-    <main id="main" role="main">
-      <!-- 
-        === HERO SECTION ===
-        Prominent opening block with branding and key messaging.
-        Includes alt-text for accessibility and SEO.
-      -->
-      <section class="container" id="hero">
-        <div class="hero-card">
-          <div class="hero-text">
-            <img
-              class="logo-hero"
-              src="assets/images/degreecelsius-logo.png"
-              alt="Degree Celsius logo"
-              width="560" height="180"
-              loading="eager" decoding="async">
-            <h1 class="hero-title">Tailored Heating &amp; Cooling Solutions for Melbourne Homes</h1>
-            <div class="small">
-              <div class="line1">MELBOURNE • RESIDENTIAL &amp; LIGHT COMMERCIAL</div>
-              <div class="line2">Specialists in Air Conditioning, Hydronic Heating &amp; Custom Climate Control for New Builds and Renovations.</div>
-            </div>
-          </div>
-        </div>
-      </section>
+<nav>
+<a href="#hero">Home</a>
+<a href="#why">Why Us</a>
+<a href="#services">Services</a>
+<a href="#projects">Projects</a>
+<a href="#contracting">Contracting</a>
+<a href="#contact">Contact</a>
+<a class="cta" href="#contact">Request Quote</a>
+</nav>
+<div class="small" style="position:absolute;bottom:18px;left:18px;right:18px"> <!-- bottom of sidebar text --> </div>
+</aside>
+<main id="main" role="main">
+<section class="container" id="hero" style="padding:18px 0">
+<div class="hero-card">
+<div class="hero-text">
+<img class="logo-hero"
+     src="assets/images/degreecelsius-logo.png"
+     alt="Degree Celsius logo"
+     width="560" height="180"
+     style="margin-bottom:10px;">
 
-      <!-- 
-        === WHY US SECTION ===
-        Highlights company differentiators using a simple 3-card layout.
-      -->
-      <section class="container" id="why">
-        <h2>Why Choose Us</h2>
-        <div class="grid-3">
-          <div class="dark-card card">
-            <h3>Custom Systems</h3>
-            <p class="small">We tailor every heating and cooling solution to your home's unique needs.</p>
-          </div>
-          <div class="dark-card card">
-            <h3>Expert Installation</h3>
-            <p class="small">Our qualified team delivers flawless workmanship and attention to detail.</p>
-          </div>
-          <div class="dark-card card">
-            <h3>Customer-Focused</h3>
-            <p class="small">From design to handover, we make the experience seamless and professional.</p>
-          </div>
-        </div>
-      </section>
+<div class="hero-text">
+  <h1 class="line1" style="all: unset; display: block; font-weight: bold; font-size: 1.2em; line-height: 1.4em; text-align: center;">
+    Tailored Heating &amp; Cooling Solutions for Melbourne Homes
+  </h1>
+</div>
 
-      <!-- 
-        === SERVICES SECTION ===
-        Lists all core service offerings as responsive cards with images and descriptions.
-      -->
-      <section class="container" id="services">
-        <h2>Services</h2>
-        <div class="services">
 
-          <!-- Each <article> represents a service -->
-          <article class="service dark-card">
-            <div class="svc-img">
-              <img src="assets/images/ducted-air-conditioning.jpg" alt="Ducted air conditioning" loading="lazy" decoding="async">
-            </div>
-            <h3>Ducted Air Conditioning</h3>
-            <p class="muted"><b>Overview:</b> Whole-home comfort with concealed ducts and zoning options.</p>
-            <p class="muted"><b>Benefits:</b> Even airflow, independent room control, and energy efficiency.</p>
-            <p class="muted"><b>Highlight:</b> Discreet design — only vents are visible.</p>
-          </article>
+<div class="small" style="margin: 10px 0; text-align: center;">
+  <div class="line1">MELBOURNE • RESIDENTIAL &amp; LIGHT COMMERCIAL</div>
+  <div class="line2">Specialists in Air Conditioning, Hydronic Heating &amp; Custom Climate Control for New Builds and Renovations.</div>
+</div>
 
-          <article class="service dark-card">
-            <div class="svc-img">
-              <img src="assets/images/split-system.jpg" alt="Split-system air conditioning" loading="lazy" decoding="async">
-            </div>
-            <h3>Split-System Air Conditioning</h3>
-            <p class="muted"><b>Overview:</b> Wall or floor-mounted systems sized for individual rooms.</p>
-            <p class="muted"><b>Benefits:</b> Energy-efficient and cost-effective — ideal for bedrooms or living areas.</p>
-            <p class="muted"><b>Highlight:</b> Modern, quiet units with remote control.</p>
-          </article>
+</section>
 
-          <article class="service dark-card">
-            <div class="svc-img">
-              <img src="assets/images/hydronic-heating.jpg" alt="Hydronic heating" loading="lazy" decoding="async">
-            </div>
-            <h3>Hydronic Heating</h3>
-            <p class="muted"><b>Overview:</b> Efficient water-based heating for natural, silent warmth.</p>
-            <p class="muted"><b>Benefits:</b> No dust or drafts, consistent temperature, allergy-friendly.</p>
-            <p class="muted"><b>Highlight:</b> Works with radiators, underfloor or trench systems.</p>
-          </article>
+    <!-- WHY -->
+    <section class="container" id="why">
+      <h2 style="text-align:center;">Why Choose Us</h2>
+      <div class="grid-3">
+        <div class="dark-card card"><h3 style="text-align:center;">Custom Systems</h3><p class="small" style="text-align:center;">We tailor every heating and cooling solution to your home's unique needs.</p></div>
+        <div class="dark-card card"><h3 style="text-align:center;">Expert Installation</h3><p class="small" style="text-align:center;">Our qualified team delivers flawless workmanship and attention to detail.</p></div>
+        <div class="dark-card card"><h3 style="text-align:center;">Customer-Focused</h3><p class="small" style="text-align:center;">From design to handover, we make the experience seamless and professional.</p></div>
+      </div>
+    </section>
 
-          <article class="service dark-card">
-            <div class="svc-img">
-              <img src="assets/images/hydronic-underfloor-heating.jpg" alt="Underfloor heating" loading="lazy" decoding="async">
-            </div>
-            <h3>Underfloor Heating</h3>
-            <p class="muted"><b>Overview:</b> Invisible luxury heating beneath your floors.</p>
-            <p class="muted"><b>Benefits:</b> Warm floors, efficient energy use, total comfort.</p>
-            <p class="muted"><b>Highlight:</b> Ideal for bathrooms, kitchens, and living spaces.</p>
-          </article>
+    <!-- SERVICES -->
+    <section class="container" id="services">
+      <h2 style="text-align:center;">Services</h2>
+      <div class="services">
 
-          <article class="service dark-card">
-            <div class="svc-img">
-              <img src="assets/images/new-build.jpg" alt="New builds and renovations" loading="lazy" decoding="async">
-            </div>
-            <h3>New Builds &amp; Renovations</h3>
-            <p class="muted"><b>Overview:</b> Heating and cooling designed into your home from day one.</p>
-            <p class="muted"><b>Benefits:</b> Tailored integration with builders and architects.</p>
-            <p class="muted"><b>Highlight:</b> Combine ducted, split, or hydronic systems to suit your lifestyle.</p>
-          </article>
+        <article class="service dark-card">
+          <div class="svc-img"><img src="assets/images/ducted-air-conditioning.jpg" alt="Ducted air conditioning"></div>
+          <h3 style="text-align:center;">Ducted Air Conditioning</h3>
+          <p class="muted"><b>Overview:</b> Whole-home comfort with concealed ducts and zoning options.</p>
+          <p class="muted"><b>Benefits:</b> Even airflow, independent room control, and energy efficiency.</p>
+          <p class="muted"><b>Highlight:</b> Discreet design — only vents are visible.</p>
+        </article>
 
-          <article class="service dark-card">
-            <div class="svc-img">
-              <img src="assets/images/servicing.jpg" alt="Maintenance and servicing" loading="lazy" decoding="async">
-            </div>
-            <h3>Maintenance &amp; Servicing</h3>
-            <p class="muted"><b>Overview:</b> Preventative care keeps systems efficient and reliable.</p>
-            <p class="muted"><b>Benefits:</b> Reduce breakdowns, extend lifespan, lower running costs.</p>
-            <p class="muted"><b>Highlight:</b> Flexible service plans for peace of mind.</p>
-          </article>
+        <article class="service dark-card">
+          <div class="svc-img"><img src="assets/images/split-system.jpg" alt="Split-system air conditioning"></div>
+          <h3 style="text-align:center;">Split-System Air Conditioning</h3>
+          <p class="muted"><b>Overview:</b> Wall or floor-mounted systems sized for individual rooms.</p>
+          <p class="muted"><b>Benefits:</b> Energy-efficient and cost-effective — ideal for bedrooms or living areas.</p>
+          <p class="muted"><b>Highlight:</b> Modern, quiet units with remote control.</p>
+        </article>
 
-        </div>
-      </section>
+        <article class="service dark-card">
+          <div class="svc-img"><img src="assets/images/hydronic-heating.jpg" alt="Hydronic heating"></div>
+          <h3 style="text-align:center;">Hydronic Heating</h3>
+          <p class="muted"><b>Overview:</b> Efficient water-based heating for natural, silent warmth.</p>
+          <p class="muted"><b>Benefits:</b> No dust or drafts, consistent temperature, allergy-friendly.</p>
+          <p class="muted"><b>Highlight:</b> Works with radiators, underfloor or trench systems.</p>
+        </article>
 
-      <!-- 
-        === CONTRACTING SECTION ===
-        B2B-oriented content aimed at integrators or builders.
-      -->
-      <section class="container" id="contracting">
-        <div class="section-title">
-          <h2>Contracting Solutions for Integrators</h2>
-        </div>
-        <div class="grid-2">
-          <div class="dark-card card">
-            <p class="small">
-              Degrees Celsius is the trusted partner of choice for high-end heating and cooling integrators across Melbourne. We deliver complete project management, technical design review, and end-to-end installation services.
-            </p>
-            <ul class="small">
-              <li><strong>Design Integration</strong> – We review and refine your heating/cooling system designs to ensure peak performance.</li>
-              <li><strong>Turnkey Installation</strong> – On-site project management and expert installation teams ensure flawless delivery.</li>
-              <li><strong>Trusted for High-End Builds</strong> – Our work is regularly featured in luxury homes, architectural builds, and major renovations.</li>
-              <li><strong>Seamless Collaboration</strong> – We work as an extension of your team, keeping your project on track and on budget.</li>
-            </ul>
-          </div>
-          <div class="dark-card card">
-            <div class="integrator-img">
-              <img src="assets/images/integration.jpg" alt="Design Integration" loading="lazy" decoding="async">
-            </div>
-          </div>
-        </div>
-      </section>
+        <article class="service dark-card">
+          <div class="svc-img"><img src="assets/images/hydronic-underfloor-heating.jpg" alt="Underfloor heating"></div>
+          <h3 style="text-align:center;">Underfloor Heating</h3>
+          <p class="muted"><b>Overview:</b> Invisible luxury heating beneath your floors.</p>
+          <p class="muted"><b>Benefits:</b> Warm floors, efficient energy use, total comfort.</p>
+          <p class="muted"><b>Highlight:</b> Ideal for bathrooms, kitchens, and living spaces.</p>
+        </article>
 
-      <!-- 
-        === PROJECTS SECTION ===
-        Includes an embedded video and client testimonial.
-      -->
-      <section id="projects" class="container">
-        <div class="section-title"><h2>Featured Project</h2></div>
-        <div class="grid-2">
-          <div class="dark-card card">
-            <div class="project-video">
-              <video
-                controls
-                playsinline
-                preload="metadata"
-                poster="assets/videos/project-video-preview.jpg"
-                width="1280" height="720">
-                <source src="assets/videos/project-video.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
-            </div>
-          </div>
+        <article class="service dark-card">
+          <div class="svc-img"><img src="assets/images/new-build.jpg" alt="New builds and renovations"></div>
+          <h3 style="text-align:center;">New Builds &amp; Renovations</h3>
+          <p class="muted"><b>Overview:</b> Heating and cooling designed into your home from day one.</p>
+          <p class="muted"><b>Benefits:</b> Tailored integration with builders and architects.</p>
+          <p class="muted"><b>Highlight:</b> Combine ducted, split, or hydronic systems to suit your lifestyle.</p>
+        </article>
 
-          <div class="dark-card card">
-            <h3>Client Testimonial</h3>
-            <p class="small">"Couldn't be happier with the system and the service. The team at Degrees Celsius went above and beyond."</p>
-            <p class="small">— Sarah, Essendon</p>
-          </div>
-        </div>
-      </section>
+        <article class="service dark-card">
+          <div class="svc-img"><img src="assets/images/servicing.jpg" alt="Maintenance and servicing"></div>
+          <h3 style="text-align:center;">Maintenance &amp; Servicing</h3>
+          <p class="muted"><b>Overview:</b> Preventative care keeps systems efficient and reliable.</p>
+          <p class="muted"><b>Benefits:</b> Reduce breakdowns, extend lifespan, lower running costs.</p>
+          <p class="muted"><b>Highlight:</b> Flexible service plans for peace of mind.</p>
+        </article>
 
-      <!-- 
-        === CONTACT SECTION ===
-        Simple contact form integrated with Formspree for submissions.
-        Includes spam honeypot (_gotcha) and hidden metadata fields.
-      -->
-      <section class="container" id="contact">
-        <form class="dark-card" action="https://formspree.io/f/xkgqyvdz" method="POST">
-          <div class="grid-2">
-            <div>
-              <label for="name">Name</label>
-              <input id="name" name="name" placeholder="Your name" required>
-            </div>
-            <div>
-              <label for="suburb">Suburb</label>
-              <input id="suburb" name="suburb" placeholder="Your suburb">
-            </div>
-          </div>
+      </div>
+    </section>
 
-          <div class="grid-2">
-            <div>
-              <label for="phone">Phone</label>
-              <input id="phone" name="phone" inputmode="tel" placeholder="Your phone number">
-            </div>
-            <div>
-              <label for="email">Email</label>
-              <input id="email" name="email" type="email" placeholder="you@example.com" required>
-            </div>
-          </div>
 
-          <div>
-            <label for="msg">Brief Message</label>
-            <textarea id="msg" name="message" rows="4" placeholder="Tell us about your project…" required></textarea>
-          </div>
+	
 
-          <!-- Honeypot field (anti-spam) -->
-          <input type="text" name="_gotcha" hidden>
-          <input type="hidden" name="_subject" value="New website enquiry – Degree Celsius">
-          <input type="hidden" name="_captcha" value="false">
+<section class="container" id="contracting">
+<div class="section-title" style="margin: 10px 0; text-align: center;"><h2 style="margin: 10px 0; text-align: center;">Contracting Solutions for Integrators</h2></div>
+<div class="grid-2">
+<div class="dark-card card">
+<p class="small" style="margin: 10px 0; text-align: center;">Degrees Celsius is the trusted partner of choice for high-end heating and cooling integrators across Melbourne. We deliver complete project management, technical design review, and end-to-end installation services.</p>
+<ul class="small">
+<li><strong>Design Integration</strong> – We review and refine your heating/cooling system designs to ensure peak performance.</li>
+<li><strong>Turnkey Installation</strong> – On-site project management and expert installation teams ensure flawless delivery.</li>
+<li><strong>Trusted for High‑End Builds</strong> – Our work is regularly featured in luxury homes, architectural builds, and major renovations.</li>
+<li><strong>Seamless Collaboration</strong> – We work as an extension of your team, keeping your project on track and on budget.</li>
+</ul>
+</div>
+<div class="dark-card card">
+  <div class="integrator-img">
+    <img src="assets/images/integration.jpg" alt="Design Integration">
+  </div>
+</div>
 
-          <button class="btn" type="submit">Request a Quote</button>
-        </form>
-      </section>
+</section>
+    <section id="projects" class="container">
+      <div class="section-title"><h2>Featured Project</h2></div>
+<div class="grid-2">
+  <!-- VIDEO CARD -->
+  <div class="dark-card card">                           <!-- open -->
+    <div class="project-video">
+<video controls playsinline width="100%"
+       poster="assets/videos/project-video-preview.jpg">
+  <source src="assets/videos/project-video.mp4" type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
 
-      <!-- === FOOTER SECTION === -->
-      <footer class="site-footer">
+    </div>
+  </div>                                                 <!-- ✅ close the video card -->
 
-        <!-- Back-to-top link -->
-        <div class="container footer-top">
-          <a href="#hero" class="back-to-top" aria-label="Back to top">Back to top ↑</a>
-        </div>
+  <!-- TESTIMONIAL CARD -->
+  <div class="dark-card card">
+    <h3>Client Testimonial</h3>
+    <p class="small">"Couldn't be happier with the system and the service. The team at Degrees Celsius went above and beyond."</p>
+    <p class="small" style="margin-top:6px">— Sarah, Essendon</p>
+  </div>
+</div>
+    </section>
+<section class="container" id="contact">
+  <form class="dark-card"
+        action="https://formspree.io/f/xkgqyvdz"
+        method="POST">
+    <div class="grid-2">
+      <div>
+        <label for="name">Name</label>
+        <input id="name" name="name" placeholder="Your name" required>
+      </div>
+      <div>
+        <label for="suburb">Suburb</label>
+        <input id="suburb" name="suburb" placeholder="Your suburb">
+      </div>
+    </div>
 
-        <!-- Footer content grid: logo + contact info -->
-        <div class="container footer-grid">
+    <div class="grid-2">
+      <div>
+        <label for="phone">Phone</label>
+        <input id="phone" name="phone" inputmode="tel" placeholder="Your phone number">
+      </div>
+      <div>
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" placeholder="you@example.com" required>
+      </div>
+    </div>
 
-          <!-- Logo and tagline -->
-          <div class="logo-row">
-            <img class="logo-footer" alt="Degree Celsius logo" src="assets/images/degreecelsius-logo.png" loading="lazy" decoding="async">
-            <div class="small">Redefining comfort, one degree at a time</div>
-          </div>
+    <div>
+      <label for="msg">Brief Message</label>
+      <textarea id="msg" name="message" rows="4" placeholder="Tell us about your project…" required></textarea>
+    </div>
 
-          <!-- Contact details and social links -->
-          <div>
-            <div class="small">Contact</div>
-            <div class="small">
-              <a href="tel:+61459326621" class="phone-link" aria-label="Call 0459 326 621">0459&nbsp;326&nbsp;621</a>
-            </div>
-            <div class="small">
-              <a href="https://www.degreecelsius.com.au" rel="noopener" target="_blank">www.degreecelsius.com.au</a>
-            </div>
-            <div class="footer-socials">
-              <a class="small" href="https://www.instagram.com/degreecelsius_hvac" rel="noopener" target="_blank">Instagram</a>
-              <a class="small" href="https://www.facebook.com/share/1AeKjB9W2e/" rel="noopener" target="_blank">Facebook</a>
-              <a class="small" href="https://www.linkedin.com/company/degree-celsius/" rel="noopener" target="_blank">LinkedIn</a>
-            </div>
-          </div>
-        </div>
+    <input type="text" name="_gotcha" style="display:none">
+    <input type="hidden" name="_subject" value="New website enquiry – Degree Celsius">
+    <input type="hidden" name="_captcha" value="false">
 
-        <!-- Copyright -->
-        <div class="container footer-copy">
-          <div class="small">© 2025 Degree Celsius. All rights reserved.</div>
-        </div>
-      </footer>
-    </main>
+    <button class="btn" type="submit">Request a Quote</button>
+  </form>
+</section>
+
+<footer class="site-footer">
+  <!-- Row 1: Back to top (right) -->
+  <div class="container footer-top">
+    <a href="#hero" class="back-to-top" aria-label="Back to top">Back to top ↑</a>
   </div>
 
-  <!-- Main JS file -->
-  <script type="module" src="assets/js/main.js"></script>
+  <!-- Row 2: Main footer content -->
+  <div class="container footer-grid">
+    <div class="logo-row">
+      <!-- keep your existing logo <img ...> tag here -->
+      <img class="logo-footer"
+     alt="Degree Celsius logo"
+     src="assets/images/degreecelsius-logo.png" />
+
+      <div>
+<!--       <div style="margin: 10px 0; text-align: center;"><span class="logo-deg">degree</span><span class="logo-symbol">°</span><span class="logo-cel">celsius</span></div> 	-->
+        <div class="small" style="margin: 10px 0; text-align: center;">Redefining comfort, one degree at a time</div>
+      </div>
+    </div>
+
+    <div>
+      <div class="small" style="margin: 10px 0; text-align: center;">Contact</div>
+      <div class="small" style="margin: 10px 0; text-align: center;"><a href="tel:+61459326621" class="phone-link" aria-label="Call 0459 326 621">
+  0459&nbsp;326&nbsp;621
+</a></div>
+      <div class="small" style="margin: 10px 0; text-align: center;">
+        <a href="https://www.degreecelsius.com.au" rel="noopener" target="_blank">www.degreecelsius.com.au</a>
+      </div>
+      <div class="footer-socials">
+        <a class="small" href="https://www.instagram.com/degreecelsius_hvac?igsh=cjg2eXlmYXdpcHYy&utm_source=qr" rel="noopener" target="_blank">Instagram</a>
+        <a class="small" href="https://www.facebook.com/share/1AeKjB9W2e/?mibextid=wwXIfr" rel="noopener" target="_blank">Facebook</a>
+        <a class="small" href="https://www.linkedin.com/company/degree-celsius/" rel="noopener" target="_blank">LinkedIn</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Row 3: Legal -->
+<div class="container footer-copy">
+  <div class="small">© 2025 Degree Celsius. All rights reserved.</div>
+</div>
+
+</footer>
+
+</main></div>
 </body>
 </html>
