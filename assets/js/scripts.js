@@ -54,4 +54,21 @@ document.addEventListener('DOMContentLoaded', function() {
   scriptTag2.type = 'application/ld+json';
   scriptTag2.textContent = JSON.stringify(websiteData);
   document.head.appendChild(scriptTag2);
+
+  // MutationObserver setup (ensure document.body exists)
+  const targetNode = document.body;
+
+  if (targetNode) {
+    const observer = new MutationObserver(() => {
+      // Logic for mutation observer
+      console.log('DOM has changed');
+    });
+
+    observer.observe(targetNode, {
+      childList: true,
+      subtree: true
+    });
+  } else {
+    console.error("document.body is not available.");
+  }
 });
