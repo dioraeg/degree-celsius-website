@@ -18,7 +18,7 @@
   "logo": "https://www.degreecelsius.com.au/assets/images/degreecelsius-logo.png",
   "image": "https://www.degreecelsius.com.au/assets/images/degreecelsius-logo.png",
   "telephone": "+61459326621",
-  "email": "info@degreecelsius.com.au",
+  "email": "admin@degreecelsius.com.au",
   "areaServed": [
     { "@type": "City", "name": "Melbourne" },
     { "@type": "AdministrativeArea", "name": "Victoria" }
@@ -44,6 +44,17 @@
   }]
 }
 </script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "url": "https://www.degreecelsius.com.au/",
+  "name": "Degree Celsius",
+  "publisher": { "@id": "https://www.degreecelsius.com.au/#business" }
+}
+</script>
+
 <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon" />
 <style>
 :root {
@@ -468,9 +479,15 @@ input:focus, textarea:focus { border-color:#3aa9ff; box-shadow:0 0 0 3px rgba(58
 <div class="wrap">
 <aside class="sidebar">
 <div class="brand">
-<span class="logo-deg">degree</span><span class="logo-symbol">°</span><span class="logo-cel">celsius</span>
-<div class="logo-tagline" style="margin: 10px 0; text-align: center;">Redefining comfort, one degree at a time</div>
+  <img src="assets/images/degreecelsius-logo.png"
+       alt="Degree Celsius logo"
+       class="sidebar-logo"
+       style="display:block;margin:0 auto 10px;max-width:180px;height:auto;">
+  <div class="logo-tagline" style="margin:10px 0;text-align:center;">
+    Redefining comfort, one degree at a time
+  </div>
 </div>
+
 <nav>
 <a href="#hero">Home</a>
 <a href="#why">Why Us</a>
@@ -492,10 +509,13 @@ input:focus, textarea:focus { border-color:#3aa9ff; box-shadow:0 0 0 3px rgba(58
      width="560" height="180"
      style="margin-bottom:10px;">
 
-</div>
 <div class="hero-text">
-<div class="line1">Tailored Heating &amp; Cooling Solutions for Melbourne Homes</div>
+  <h1 class="line1" style="all: unset; display: block; font-weight: bold; font-size: 1.2em; line-height: 1.4em; text-align: center;">
+    Tailored Heating &amp; Cooling Solutions for Melbourne Homes
+  </h1>
 </div>
+
+
 <div class="small" style="margin: 10px 0; text-align: center;">
   <div class="line1">MELBOURNE • RESIDENTIAL &amp; LIGHT COMMERCIAL</div>
   <div class="line2">Specialists in Air Conditioning, Hydronic Heating &amp; Custom Climate Control for New Builds and Renovations.</div>
