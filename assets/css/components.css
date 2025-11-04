@@ -1,0 +1,23 @@
+/* ===== Shared typography ===== */
+.small {
+  font-size: 0.875rem;
+  line-height: 1.4;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+/* ===== Section titles ===== */
+.section-title h2 {
+  margin: 10px 0;
+  text-align: center;
+}
+
+/* ===== Cards consistency ===== */
+.dark-card.card h3 {
+  text-align: center;
+}
+.dark-card.card p.small {
+  text-align: center;
+}
