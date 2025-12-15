@@ -4,7 +4,7 @@ This approach keeps the site fast, simple to maintain, and easy for users to und
 
 ## Navigation & Layout
 The sidebar on the left contains links such as Home, Why Us, Services, Projects, Reviews, and Contact.
-Each of these links scrolls the visitor directly to the relevant section on the page. There are no page reloads — everything happens instantly, which improves usability and performance.
+Each of these links scrolls the visitor directly to the relevant section on the page. There are no page reloads, everything happens instantly, which improves usability and performance.
 
 ## Page Sections Explained
 ### Hero (Top of Page)
@@ -52,7 +52,7 @@ Basic spam protection is included, and the form works reliably across desktop an
 The overall look and feel of the site (colours, spacing, layout, cards, grids) is controlled by a central stylesheet. This ensures the design stays consistent across the entire site and can be updated easily without touching the content.
 
 ## Images & Media
-All images and videos are stored locally within the website’s asset folders. Updating photos or replacing the project video is as simple as swapping out the file — no redesign required.
+All images and videos are stored locally within the website’s asset folders. Updating photos or replacing the project video is as simple as swapping out the file, no redesign required.
 
 ## SEO & Google Visibility
 The site is built with search engines in mind:
